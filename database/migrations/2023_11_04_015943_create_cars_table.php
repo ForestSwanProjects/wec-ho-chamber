@@ -25,7 +25,7 @@ return new class extends Migration
                 ->onDelete('cascade')->onUpdate('cascade');
 
             //telling db race_id is foreign key and which col. and table its from
-            $table->foreign('race_id')->references('id')->on('team')
+            $table->foreign('race_id')->references('id')->on('races')
                 ->onDelete('cascade')->onUpdate('cascade');
         });
     }
