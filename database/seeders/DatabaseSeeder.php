@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call(RaceTableSeeder::class);
         $this->call(TeamTableSeeder::class);
+        $this->call(CarTableSeeder::class);
 
         // \App\Models\User::factory(10)->create();
 
