@@ -19,5 +19,7 @@ class RaceTableSeeder extends Seeder
         $r->no_hours = 8;
         $r->date_of_race = "2023-01-01";
         $r->save();
+
+        Race::factory()->count(20)->create();
     }
 }
