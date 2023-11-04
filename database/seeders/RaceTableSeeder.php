@@ -13,6 +13,7 @@ class RaceTableSeeder extends Seeder
      */
     public function run(): void
     {
+        //Lecture 6: Task 1 - create seeder and add 5 races
         $r = new Race;
         $r->circuit_name = "Kilvey Hill Climb";
         $r->country = "Wales";
@@ -47,6 +48,7 @@ class RaceTableSeeder extends Seeder
         $r4->date_of_race = "2023-11-04";
         $r4->save();
 
+        //add 20 randomly generated races
         Race::factory()->count(20)->create();
     }
 }
