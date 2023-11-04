@@ -24,5 +24,7 @@ class CarTableSeeder extends Seeder
         $c1->model = '07';
         $c1->class = 'LMP2';
         $c1->save();
+
+        Car::factory()->count(100)->create();
     }
 }
