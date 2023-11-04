@@ -20,6 +20,10 @@ class TeamTableSeeder extends Seeder
         $t1 = new Team;
         $t1->team_name = "Hertz Team Jota";
         $t1->save();
+
+        $t2 = new Team;
+        $t2->team_name = "Iron Dames";
+        $t2->save();
         
         Team::factory()->count(100)->create();
     }
