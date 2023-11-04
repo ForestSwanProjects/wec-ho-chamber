@@ -17,7 +17,10 @@ class RaceFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'circuit_name' => fake()->name(),//try to change to a race circuit with correct country
+            'country' => fake()->country(),
+            'no_hours' => fake()->numberBetween(4, 10),
+            'date_of_race' => fake()->date($format = 'Y-m-d', $max = 'now')
         ];
     }
 }
