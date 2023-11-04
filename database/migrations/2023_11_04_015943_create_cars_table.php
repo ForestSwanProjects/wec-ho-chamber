@@ -16,7 +16,12 @@ return new class extends Migration
             $table->string('make');
             $table->string('model');
             $table->string('class');
+            $table->bigInteger('team_id')->unsigned();
             $table->timestamps();
+
+            //telling db team_id is foreign key and where its from
+            $table->foreign('team_id')->references('id')->on('teams')
+                ->onDelete('cascade')->onUpdate('cascade');
         });
     }
 
