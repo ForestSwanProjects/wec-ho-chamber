@@ -17,14 +17,16 @@ class CarTableSeeder extends Seeder
         $c->make = 'Toyota';
         $c->model = 'GR010';
         $c->class = 'Hypercar';
+        $c->team_id = 1;
         $c->save();
 
         $c1 = new Car;
         $c1->make = 'Oreca';
         $c1->model = '07';
         $c1->class = 'LMP2';
+        $c1->team_id = 2;
         $c1->save();
 
-        Car::factory()->count(100)->create();
+        //Car::factory()->count(100)->create();
     }
 }
