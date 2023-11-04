@@ -37,6 +37,6 @@ class CarTableSeeder extends Seeder
         $c2->race_id = 1;
         $c2->save();
 
-        //Car::factory()->count(100)->create();
+        Car::factory()->count(100)->create();
     }
 }

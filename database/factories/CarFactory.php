@@ -20,6 +20,8 @@ class CarFactory extends Factory
             'make' => fake()->company(),
             'model' => fake()->colorName(),
             'class' => fake()->fileExtension(),
+            'team_id' => fake()->numberBetween(1,103),
+            'race_id' => fake()->numberBetween(1,25),
         ];
     }
 }
