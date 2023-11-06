@@ -18,6 +18,7 @@ class TeamFactory extends Factory
     {
         return [
             'team_name' => fake()->company()." Racing Team",
+            'car_id' => fake()->numberBetween(1,103),
         ];
     }
 }

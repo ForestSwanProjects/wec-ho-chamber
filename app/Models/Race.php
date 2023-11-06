@@ -9,7 +9,9 @@ class Race extends Model
 {
     use HasFactory;
 
-    //one to many relationship for 1 race having many cars
+    /**
+     * relationship: one to many for 1 race having many cars
+     */
     public function cars()
     {
         return $this->hasMany(Car::class);

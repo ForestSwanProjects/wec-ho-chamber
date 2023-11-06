@@ -17,7 +17,6 @@ class CarTableSeeder extends Seeder
         $c->make = 'Toyota';
         $c->model = 'GR010';
         $c->class = 'Hypercar';
-        $c->team_id = 1;
         $c->race_id = 1;
         $c->save();
 
@@ -25,7 +24,6 @@ class CarTableSeeder extends Seeder
         $c1->make = 'Oreca';
         $c1->model = '07';
         $c1->class = 'LMP2';
-        $c1->team_id = 2;
         $c1->race_id = 1;
         $c1->save();
 
@@ -33,10 +31,10 @@ class CarTableSeeder extends Seeder
         $c2->make = 'Porsche';
         $c2->model = '911 RSR';
         $c2->class = 'GTE';
-        $c2->team_id = 3;
         $c2->race_id = 1;
         $c2->save();
 
+        //seed another 100 cars using car factory
         Car::factory()->count(100)->create();
     }
 }

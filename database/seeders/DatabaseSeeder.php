@@ -4,6 +4,8 @@ namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use \App\Models\Race;
+use \App\Models\Car;
 
 class DatabaseSeeder extends Seeder
 {
@@ -12,15 +14,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call(TeamTableSeeder::class);
-        $this->call(RaceTableSeeder::class);
+        //$this->call(TeamTableSeeder::class);
+        //$this->call(RaceTableSeeder::class);
         //$this->call(CarTableSeeder::class);
 
-        // \App\Models\User::factory(10)->create();
+        //creates 3 races with 20 cars in each and their respective teams
+        Race::factory()->has(\App\Models\Car::factory()->has(\App\Models\Team::factory())->count(20))->count(3)->create();
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
     }
 }

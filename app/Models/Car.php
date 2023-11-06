@@ -9,15 +9,21 @@ class Car extends Model
 {
     use HasFactory;
 
-    //one to one rel. where a car belongs to a team
-    //get team the car belongs to
+    /**
+     * get team which belongs to car
+     * 
+     * relationship: one to one for a single car having a single team
+     */
     public function team()
     {
-        return $this->belongsTo(Team::class);
+        return $this->hasOne(Team::class);
     }
 
-    //one to many rel. where a race can have many cars
-    //get race the car belongs to
+    /**
+     * get race the car belongs to
+     * 
+     * relationship: one to many where a race can have many cars
+     */
     public function race()
     {
         return $this->belongsTo(Race::class);

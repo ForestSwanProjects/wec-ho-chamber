@@ -16,13 +16,8 @@ return new class extends Migration
             $table->string('make');
             $table->string('model');
             $table->string('class');
-            $table->bigInteger('team_id')->unsigned();
             $table->bigInteger('race_id')->unsigned();
             $table->timestamps();
-
-            //telling db team_id is foreign key and which col. and table its from
-            $table->foreign('team_id')->references('id')->on('teams')
-                ->onDelete('cascade')->onUpdate('cascade');
 
             //telling db race_id is foreign key and which col. and table its from
             $table->foreign('race_id')->references('id')->on('races')

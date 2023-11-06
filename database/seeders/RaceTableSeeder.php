@@ -14,7 +14,6 @@ class RaceTableSeeder extends Seeder
     public function run(): void
     {
         //Lecture 6: Task 1 - create seeder and add 5 races
-        /*
         $r = new Race;
         $r->circuit_name = "Kilvey Hill Climb";
         $r->country = "Wales";
@@ -47,10 +46,8 @@ class RaceTableSeeder extends Seeder
         $r4->country = "Bahrain";
         $r4->no_hours = 8;
         $r4->date_of_race = "2023-11-04";
-        $r4->save();*/
+        $r4->save();
 
-        //creates 3 races with 20 cars each
-        Race::factory()->has(\App\Models\Car::factory()->count(20))->count(3)->create();
 
     }
 }
